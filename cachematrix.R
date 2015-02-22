@@ -5,9 +5,10 @@
 ## The function returns a list object which gives access to all the sub-funtions defined within this.
 
 makeCacheMatrix <- function(x = matrix()) {
+        ## intializing the inverse value to NULL
         y <- NULL
         
-        ## sets the value of x as matrix passed as a parameter
+        ## sets the value of x as matrix passed as an argument
         setMatrix <- function(y) x<<-y
         ## returns the value of the x
         getmatrix <- function() x
@@ -16,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
         setInverse <- function(inverse) y <<- inverse
         ## returns the inverse value of matrix if already stored else returns null.
         getInverse <- function() y
- 
+        
+        ## The function returns a list object on which the above functions can be called
         list(setMatrix = setMatrix, getmatrix = getmatrix,
         setInverse = setInverse,
         getInverse = getInverse)
