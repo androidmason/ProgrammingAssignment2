@@ -9,7 +9,10 @@ makeCacheMatrix <- function(x = matrix()) {
         y <- NULL
         
         ## sets the value of x as matrix passed as an argument
-        setMatrix <- function(y) x<<-y
+        setMatrix <- function(y){
+        x<<-y
+        y<<-NULL
+        }
         ## returns the value of the x
         getmatrix <- function() x
  
